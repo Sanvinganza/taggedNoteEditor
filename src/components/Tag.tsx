@@ -6,6 +6,6 @@ export default function Tag (props: ITagProps) {
   const { tag } = props;
   
   return (
-    <div className='tag'>#{tag}</div>
+    <div className='tag__list-item'>#{tag}</div>
   );
 }

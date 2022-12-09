@@ -27,6 +27,7 @@ code {
   display: flex;
   justify-content: center;
   align-items: center;
+  
   &--inner {
     display: flex;
     flex-direction: column;
@@ -37,7 +38,7 @@ code {
       font-family: 'Times New Roman', Times, serif;
       text-shadow: $dark-red 1px 0 10px;
     }
-    .notes-container {
+    &__body {
       display: flex;
       flex-flow: wrap;
       justify-content: center;
@@ -49,26 +50,36 @@ code {
   display: flex;
   max-width: 200px;
   padding: 5px;
-  &--inner {
-    .edit {
+  flex-direction: column;
+
+  &__header {
+    .button {
       padding: 5px;
       color: $dark-red;
       background-color: $light-red;
       border-top-left-radius: 5px;
       border-top-right-radius: 5px;
     }
-    .text {
-      padding: 5px;
-      color: $black;
-      background-color: $light-grey;
-      border-bottom-left-radius: 5px;
-      border-bottom-right-radius: 5px;
-    }
-    .tags-container {
+  }
+
+  &__body {
+    padding: 5px;
+    color: $black;
+    background-color: $light-grey;
+
+  }
+
+  &__footer {
+    background-color: $dark-red;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    color: $white;
+
+    .tag__list {
       display: flex;
       flex-direction: row;
       flex-flow: wrap;
-      .tag {
+      &-item {
         padding: 5px;
       }
     }
